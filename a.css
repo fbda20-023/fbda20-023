@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'Quicksand', sans-serif;
+}
+:root{
+    --color:#ff282b;
+}
+header{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  z-index: 2;
+  background-color: teal;
+}
+#logo{
+    line-height: 40px;
+    margin-right: 300px;
+    display: inline-block;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  color: yellow; 
+}
+#logo:hover{
+    color: black; 
+}
+#logo-s{
+  color: black; 
+  margin-left: 5px;
+}
+#logo:hover #logo-s{
+  color:yellow; 
+}
+header ul{
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+header ul li{
+  list-style: none;
+  position: relative;
+  padding: 10px 15px;
+  transition: 0.5s;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255,255,255,.2);
+}
+header ul li:hover{
+  background: black;
+}
+header ul li:last-child{
+  border-right: none;
+}
+header ul li a{
+  text-decoration: none;
+  padding: 0 10px;
+  color: yellow;
+}
+header ul li ul{
+  position: absolute;
+  top: 44px;
+  left: 0;
+  background: teal;
+  display: block;
+  width: 150px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+header ul li:hover ul{
+  opacity: 1;
+  visibility: visible;
+}
+header ul li ul li{
+  border-right: none;
+  border-bottom: 1px solid rgba(255,255,255,.2)
+}
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+     background-image: url(img/5.jpg);
+}
+
+.container{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.left img{
+    max-width: 250%;
+    height: 300px;
+    vertical-align: middle;
+}
+.right > *{
+    margin-bottom: 1.1rem;
+    color: #000;
+}
+
+.right h1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.right p{
+    text-align: justify;
+}
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+.btn::after{
+    content: "";
+    background: var(--color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: width .5s ease;
+}
+.btn:hover::after{
+    width: 100%;
+}
+@media (max-width:768px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #000;
+}
+
+.container{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+
+}
+
+.button{
+  height: 80px;
+  width: 350px;
+  background: yellow;
+  border: none;
+  font-size: 1.2rem;
+  margin: 20px;
+  border: 2px solid yellow;
+  outline: 2px solid yellow;
+  cursor: pointer;
+  color: black;
+  outline-offset: 4px;
+  transition: all 260ms;
+}
+
+.button:hover{
+  outline-offset: -7px;
+  color: teal;
+  background: none;
+}
+
+.button:nth-child(2){
+  outline-offset: -4px;
+}
+
+.button:nth-child(2):hover{
+  outline-offset: 4px;
+}
